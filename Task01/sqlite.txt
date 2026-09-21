@@ -1,0 +1,27 @@
+3.46.1 2024-08-13 09:16:08 c9c2ab54ba1f5f46360f1b4f35d849cd3f080e6fc2b6c60e91b16c63f69aalt1 (64-bit)
+
+Доступные режимы вывода данных (output modes) в sqlite3:
+.mode MODE ?OPTIONS?     Set output mode
+   MODE is one of:
+     ascii       Columns/rows delimited by 0x1F and 0x1E
+     box         Tables using unicode box-drawing characters
+     csv         Comma-separated values
+     column      Output in columns.  (See .width)
+     html        HTML <table> code
+     insert      SQL insert statements for TABLE
+     json        Results in a JSON array
+     line        One value per line
+     list        Values delimited by "|"
+     markdown    Markdown table format
+     qbox        Shorthand for "box --wrap 60 --quote"
+     quote       Escape answers as for SQL
+     table       ASCII-art table
+     tabs        Tab-separated values
+     tcl         TCL list elements
+   OPTIONS: (for columnar modes or insert mode):
+     --wrap N       Wrap output lines to no longer than N characters
+     --wordwrap B   Wrap or not at word boundaries per B (on/off)
+     --ww           Shorthand for "--wordwrap 1"
+     --quote        Quote output text as SQL literals
+     --noquote      Do not quote output text
+     TABLE          The name of SQL table used for "insert" mode
